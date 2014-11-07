@@ -94,7 +94,7 @@ namespace WpfApplication2.Primitives
 
         public override string Above()
         {
-            return "y>" + 
+            return "y>kx+b";// + 
         }
     }
 }

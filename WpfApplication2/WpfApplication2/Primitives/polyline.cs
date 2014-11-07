@@ -99,9 +99,11 @@ namespace WpfApplication2.Primitives
         {
             string result = "";
 
-            foreach (line l in lineList)
+            for (int i = 0; i < lineList.Count; i++)
             {
-                result += l.
+                result += lineList[i].Above();
+                if (i + 1 != lineList.Count)
+                    result += "&";
             }
 
             return result;
