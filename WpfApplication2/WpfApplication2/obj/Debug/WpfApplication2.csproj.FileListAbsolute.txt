@@ -65,3 +65,6 @@ C:\Users\Коля\Documents\Visual Studio 2013\Projects\WpfApplication2\WpfAppli
 C:\Users\Nikolay\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.exe.config
 C:\Users\Nikolay\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.exe
 C:\Users\Nikolay\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.pdb
+C:\Users\Коля\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.exe.config
+C:\Users\Коля\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.exe
+C:\Users\Коля\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.pdb
