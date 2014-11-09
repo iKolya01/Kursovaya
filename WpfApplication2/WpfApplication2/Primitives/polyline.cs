@@ -108,5 +108,19 @@ namespace WpfApplication2.Primitives
 
             return result;
         }
+
+        public override string Below()
+        {
+            string result = "";
+
+            for (int i = 0; i < lineList.Count; i++)
+            {
+                result += lineList[i].Below();
+                if (i + 1 != lineList.Count)
+                    result += "&";
+            }
+
+            return result;
+        }
     }
 }

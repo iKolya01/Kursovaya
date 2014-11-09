@@ -103,5 +103,17 @@ namespace WpfApplication2.Primitives
 
             return "y>" + k.ToString() +  "*x+" + b.ToString(); 
         }
+
+        public override string Below()
+        {
+            int dx = One.X > Two.X ? One.X - Two.X : Two.X - One.X;
+            int dy = One.Y > Two.Y ? One.Y - Two.Y : Two.Y - One.Y;
+
+            float k = dy / dx;
+
+            float b = One.Y - k * One.X;
+
+            return "y<" + k.ToString() + "*x+" + b.ToString();
+        }
     }
 }

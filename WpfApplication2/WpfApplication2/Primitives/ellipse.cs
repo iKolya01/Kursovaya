@@ -124,5 +124,17 @@ namespace WpfApplication2.Primitives
                 }
             }
         }
+
+        public override string Included()
+        {
+            return "(x-" + Coordinate.X.ToString() + ")*(x-" + Coordinate.X.ToString() + ") + (y-" + 
+                   Coordinate.Y.ToString() + ")*(y - " + Coordinate.Y.ToString() + ")<" + R.ToString() + "*" + R.ToString();
+        }
+
+        public override string unIncluded()
+        {
+            return "(x-" + Coordinate.X.ToString() + ")*(x-" + Coordinate.X.ToString() + ") + (y-" +
+                   Coordinate.Y.ToString() + ")*(y - " + Coordinate.Y.ToString() + ")>" + R.ToString() + "*" + R.ToString();
+        }
     }
 }

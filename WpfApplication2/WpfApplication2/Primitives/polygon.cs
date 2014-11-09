@@ -115,7 +115,64 @@ namespace WpfApplication2.Primitives
                         break;
                     }
             }
+        }
 
+        public override string Included()
+        {
+            string result = "";
+
+            switch (count)
+            {
+                case 3:
+                    {
+                        result = lineList[0].Below() + "&" + lineList[1].Above() + "&" + lineList[2].Above();
+                        
+                        break;
+                    }
+                case 4:
+                    {
+                        result = lineList[0].Below() + "&" + lineList[1].Above() + "&" + lineList[2].Above() + "&" + lineList[3].Above();
+
+                        break;
+                    }
+                case 5:
+                    {
+                        result = lineList[0].Below() + "&" + lineList[1].Below() + "&" + lineList[2].Above() + "&" + lineList[3].Above() + "&" + lineList[4].Above();
+                        
+                        break;
+                    }
+            }
+
+            return result;
+        }
+
+        public override string unIncluded()
+        {
+            string result = "";
+
+            switch (count)
+            {
+                case 3:
+                    {
+                        result = lineList[0].Above() + "&" + lineList[1].Below() + "&" + lineList[2].Below();
+
+                        break;
+                    }
+                case 4:
+                    {
+                        result = lineList[0].Above() + "&" + lineList[1].Below() + "&" + lineList[2].Below() + "&" + lineList[3].Below();
+
+                        break;
+                    }
+                case 5:
+                    {
+                        result = lineList[0].Above() + "&" + lineList[1].Above() + "&" + lineList[2].Below() + "&" + lineList[3].Below() + "&" + lineList[4].Below();
+
+                        break;
+                    }
+            }
+
+            return result;
         }
     }
 }
