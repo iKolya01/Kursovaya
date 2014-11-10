@@ -1,49 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <base>
-  <!--<template id="0">
-	<primitive>
-	  <circle id="0" link="none" />
-	  <circle id="1" link="0" />
-	  <lineblock type="polyline" link="none">
-		<line id="1" link1="none" link2="none" />
-		<line id="2" link1="1" link2="none" />
-		<line id="3" link1="none" link2="none" />
-		<line id="4" link1="none" link2="none" />
-		<line id="5" link1="1" link2="none" />
-		<line id="6" link1="none" lin 2="none" />
-		<line id="7" link1="none" link2="none" />
-		<line id="8" link1="1" link2="none" />
-		<line id="9" link1="none" link2="none" />
-		<line id="10" link1="none" link2="none" />
-		<line id="11" link1="1" link2="none" />
-		<line id="12" link1="none" link2="none" />
-		<line id="4" link1="1" link2="none" />
-	  </lineblock>
-	</primitive>
-	<area>(0.i)and(0.a)and(1.a)and(2.a)and(3.a)</area>
-  </template>-->
   <template id="0">
 	<primitive>
-	  <!--<circle id="0" link="none"/>
-	  <circle id="1" link="0"/>
-	  <polygon id="0" link="none" linecount="5" />-->
 	  <polyline id="0" link="none" linecount="2" />
 	</primitive>
 	<area>(0.a)</area>
   </template>
-  <!--<template id="1">
+  <template id="1">
 	<primitive>
 	  <circle id="0" link="none"/>
-	  <polygon id="0" link="none" linecount="5" />
+	  <polygon id="1" link="0" linecount="3" />
 	</primitive>
-	<area>(0.u)</area>
-  </template>-->
-  <!--<template id="2">
+	<area>(0.i)(1.u)</area>
+  </template>
+  <template id="2">
 	<primitive>
-	  <polyline id="0" link="none" linecount="5" />
+	  <polyline id="0" link="none" linecount="3" />
 	</primitive>
 	<area>(0.a)</area>
-  </template>-->
+  </template>
+  <template id="7">
+	<primitive>
+	  <circle id="0" link="none"/>
+	</primitive>
+	<area>(0.i)</area>
+  </template>
+  <template id="3">
+	<primitive>
+	  <polyline id="0" link="none" linecount="2" />
+	</primitive>
+	<area>(0.a)</area>
+  </template>
+  <template id="4">
+	<primitive>
+	  <circle id="0" link="none"/>
+	  <polygon id="1" link="0" linecount="3" />
+	</primitive>
+	<area>(0.i)(1.u)</area>
+  </template>
+  <template id="5">
+	<primitive>
+	  <polyline id="0" link="none" linecount="3" />
+	</primitive>
+	<area>(0.a)</area>
+  </template>
+  <template id="6">
+	<primitive>
+	  <circle id="0" link="none"/>
+	</primitive>
+	<area>(0.i)</area>
+  </template>
 </base>
 
 

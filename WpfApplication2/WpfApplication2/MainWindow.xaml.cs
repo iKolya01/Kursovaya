@@ -27,7 +27,8 @@ namespace WpfApplication2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Test newTest = new Test();
+
+            Test newTest = new Test(FI.Text);
             newTest.Show();
 
             this.Close();

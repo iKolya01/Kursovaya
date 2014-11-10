@@ -30,6 +30,8 @@ namespace WpfApplication2
 
         static List<Task> taskList = new List<Task>();
 
+        static string userName = "";
+
         static string fileAdress = "base.xml";
 
         from_XML_to_Task Base = new from_XML_to_Task(fileAdress);
@@ -69,7 +71,7 @@ namespace WpfApplication2
             }
         }
 
-        public Test()
+        public Test(string FI)
         {
             InitializeComponent();
 
@@ -78,7 +80,9 @@ namespace WpfApplication2
             drawXOY(scene);
             taskList[i].Draw(scene);
 
-            lbl.Content = taskList[i].EtalonAnswer;
+            lbl.Text = taskList[i].EtalonAnswer;
+
+            userName = FI;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -93,7 +97,7 @@ namespace WpfApplication2
                 drawXOY(scene);
             }else
             {
-                Result newRes = new Result(taskList);
+                Result newRes = new Result(taskList, userName);
                 newRes.Show();
                 this.Close();
             }
@@ -104,10 +108,10 @@ namespace WpfApplication2
             {
                 taskList[i].Draw(scene);
 
-                lbl.Content = taskList[i].EtalonAnswer;
+                lbl.Text = taskList[i].EtalonAnswer;
             }else
             {
-                Result newRes = new Result(taskList);
+                Result newRes = new Result(taskList, userName);
                 newRes.Show();
                 this.Close();
             }

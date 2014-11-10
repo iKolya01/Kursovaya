@@ -102,7 +102,12 @@ namespace WpfApplication2.Primitives
             int dx = One.X > Two.X ? One.X - Two.X : Two.X - One.X;
             int dy = One.Y > Two.Y ? One.Y - Two.Y : Two.Y - One.Y;
 
-            float k = dy / dx;
+            float k = 0;
+
+            if (dx != 0)
+                k = (float)dy / (float)dx;
+
+            k = (float)Math.Round(k, 2);
 
             float b = One.Y - k * One.X;
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,16 +20,23 @@ namespace WpfApplication2
     public partial class Result : Window
     {
         TestChek ChekTest = new TestChek();
+        List<bool> taskResult = new List<bool>();
+        List<string[]> answer = new List<string[]>();
 
         int result = 0;
         int mark = 0;
 
-        public Result(List<Task> taskList)
+        string userName = "";
+
+        public Result(List<Task> taskList, string FI)
         {
             InitializeComponent();
 
             foreach (Task x in taskList)
             {
+                string[] ans = {x.EtalonAnswer, x.UserAnswer};
+                answer.Add(ans);
+
                 string[] EAL = x.EtalonAnswer.Split('&');
                 string[] UAL = x.UserAnswer.Split('&');
 
@@ -53,7 +61,11 @@ namespace WpfApplication2
                 }
 
                 if (pro == 0)
+                {
                     result++;
+                    taskResult.Add(true);
+                }else
+                    taskResult.Add(false);
             }
 
             if (result == 10)
@@ -66,6 +78,46 @@ namespace WpfApplication2
                 mark = 2;
 
             point.Text = mark.ToString();
+
+            userName = FI;
+
+            addStatistic();
+        }
+
+        private void addStatistic()
+        {
+            string OUT = @" <div class='col-md-9'><h1>" + userName + @"</h1></div>
+	                        <div class='col-md-3'><h2>Оценка: " + mark.ToString() + @"</h2></div>
+	                        <table class='table table-bordered'>
+		                        <thead>
+			                    <tr>
+			                        <th>#</th>
+			                        <th>Эталонное решение</th>
+			                        <th>Ответ пользователя</th>
+			                    </tr>
+		                        </thead>
+		                        <tbody>";
+
+            for (int i = 0; i < taskResult.Count; i++)
+            {
+                string tr = "";
+
+                if (taskResult[i])
+                    tr = "<tr class='success'>";
+                else
+                    tr = "<tr class='danger'>";
+
+                tr += "<td>" + (i + 1).ToString() + "</td>";
+                tr += "<td>" + answer[i][0] + "</td>";
+                tr += "<td>" + answer[i][1] + "</td>";
+                tr += "</tr>";
+
+                OUT += tr;
+            }
+
+            OUT += "</table>";
+
+            File.AppendAllText("statistic.html", OUT);
         }
     }
 }
