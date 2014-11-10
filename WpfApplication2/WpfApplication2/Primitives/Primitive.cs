@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace WpfApplication2.Primitives
 {
-    class Primitive//базовый класс для всех примитивов
+    public class Primitive//базовый класс для всех примитивов
     {
         protected int id;//идентификатор примитива
         protected int linewidth;//ширина линии

@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace WpfApplication2.Primitives
 {
-    class label
+    public class label
     {
         string content;//содержание строки
         public string Content

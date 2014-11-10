@@ -9,7 +9,7 @@ using System.Windows.Shapes;
 
 namespace WpfApplication2.Primitives
 {
-    class point : Primitive
+    public class point : Primitive
     {
         int x;
         public int X

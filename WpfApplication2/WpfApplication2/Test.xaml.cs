@@ -28,7 +28,7 @@ namespace WpfApplication2
      */
         int i = 0;
 
-        List<Task> taskList = new List<Task>();
+        static List<Task> taskList = new List<Task>();
 
         static string fileAdress = "base.xml";
 
@@ -93,7 +93,7 @@ namespace WpfApplication2
                 drawXOY(scene);
             }else
             {
-                Result newRes = new Result();
+                Result newRes = new Result(taskList);
                 newRes.Show();
                 this.Close();
             }
@@ -107,7 +107,7 @@ namespace WpfApplication2
                 lbl.Content = taskList[i].EtalonAnswer;
             }else
             {
-                Result newRes = new Result();
+                Result newRes = new Result(taskList);
                 newRes.Show();
                 this.Close();
             }

@@ -9,7 +9,7 @@ using System.Windows.Shapes;
 
 namespace WpfApplication2.Primitives
 {
-    class polygon : Primitive
+    public class polygon : Primitive
     {
         int count;
 

@@ -9,7 +9,7 @@ using System.Windows.Media;
 
 namespace WpfApplication2.Primitives
 {
-    class ellipse : Primitive
+    public class ellipse : Primitive
     {
         point coordinate;//координата центра окружности
         public override point Coordinate

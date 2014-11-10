@@ -23,11 +23,49 @@ namespace WpfApplication2
         int result = 0;
         int mark = 0;
 
-        public Result()
+        public Result(List<Task> taskList)
         {
             InitializeComponent();
-        }
 
-        
+            foreach (Task x in taskList)
+            {
+                string[] EAL = x.EtalonAnswer.Split('&');
+                string[] UAL = x.UserAnswer.Split('&');
+
+                foreach (string str in UAL)
+                    str.Trim('&');
+
+                int pro = UAL.Length;
+
+                if (EAL.Length == UAL.Length)
+                {
+                    for (int i = 0; i < UAL.Length; i++)
+                    {
+                        for (int j = 0; j < EAL.Length; j++)
+                        {
+                            if (UAL[i] == EAL[j])
+                            {
+                                EAL[i] = "";
+                                pro--;
+                            }
+                        }
+                    }
+                }
+
+                if (pro == 0)
+                    result++;
+            }
+
+            if (result == 10)
+                mark = 5;
+            if (result <= 9)
+                mark = 4;
+            if (result < 8)
+                mark = 3;
+            if (result < 6)
+                mark = 2;
+
+            point.Text = mark.ToString();
+        }
     }
 }

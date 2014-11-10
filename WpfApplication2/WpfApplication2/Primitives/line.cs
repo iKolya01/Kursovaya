@@ -8,7 +8,7 @@ using System.Windows.Shapes;
 
 namespace WpfApplication2.Primitives
 {
-    class line : Primitive
+    public class line : Primitive
     {
         point one;//первая точка
         public override point One

@@ -116,7 +116,7 @@ namespace WpfApplication2
                         }
                 }
 
-
+                i++;
             }
 
             return result;

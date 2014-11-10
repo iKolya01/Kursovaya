@@ -9,7 +9,7 @@ using System.Windows.Shapes;
 
 namespace WpfApplication2.Primitives
 {
-    class polyline : Primitive
+    public class polyline : Primitive
     {
         int count;
 

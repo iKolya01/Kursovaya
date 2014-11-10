@@ -7,7 +7,7 @@ using WpfApplication2.Primitives;
 
 namespace WpfApplication2
 {
-    class Task
+    public class Task
     {
         int id;
         public int ID
