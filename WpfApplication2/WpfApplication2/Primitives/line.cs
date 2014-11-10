@@ -43,30 +43,9 @@ namespace WpfApplication2.Primitives
             myLine.Y2 = 260 - two.Y;
             myLine.StrokeThickness = linewidth;
             myLine.Stroke = System.Windows.Media.Brushes.Black;
+            myLine.ToolTip = "Ебаь это наведение";
             myCanvas.Children.Add(myLine);
         }
-
-        /*public override void aDraw(Canvas myCanvas)
-        {
-            for (int i = 0; i < 550; i += 5)
-            {
-                for (int j = 0; j < 250; j += 5)
-                {
-                    if (Above(i, j)) new point(-9, i, j).Draw(myCanvas, System.Windows.Media.Brushes.Gray);
-                }
-            }
-        }
-
-        public override void bDraw(Canvas myCanvas)
-        {
-            for (int i = 0; i < 550; i += 5)
-            {
-                for (int j = 0; j < 250; j += 5)
-                {
-                    if (Below(i, j)) new point(-9, i, j).Draw(myCanvas, System.Windows.Media.Brushes.Gray);
-                }
-            }
-        }*/
 
         public override bool Above(Point point)
         {

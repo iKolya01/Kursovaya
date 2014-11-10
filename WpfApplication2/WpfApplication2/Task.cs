@@ -32,6 +32,15 @@ namespace WpfApplication2
 
         bool[,] points = new bool[110, 50];
 
+        string etelonAnswer = "";
+        string userAnswer = "";
+
+        public string UserAnswer
+        {
+            get { return userAnswer; }
+            set { userAnswer = value; }
+        }
+
         public Task() { }
 
         public Task(int id, List<Primitive> listPrimitives, string area)
@@ -44,11 +53,9 @@ namespace WpfApplication2
                 for (int j = 0; j < 50; j++)
                     points[i, j] = true;
         }
-        
+
         public void Draw(Canvas myCanvas)
         {
-            string operation = "";
-
             int i = 0;
             while(i < area.Length)
             {
@@ -69,21 +76,26 @@ namespace WpfApplication2
                     {
                         case "a":
                             listPrimitives[Convert.ToInt32(id[0])].aDraw(ref points);
+                            etelonAnswer += listPrimitives[Convert.ToInt32(id[0])].Above();
                             break;
                         case "b":
                             listPrimitives[Convert.ToInt32(id[0])].bDraw(ref points);
+                            etelonAnswer += listPrimitives[Convert.ToInt32(id[0])].Below();
                             break;
                         case "i":
                             listPrimitives[Convert.ToInt32(id[0])].iDraw(ref points);
-                            break;
-                        case "d":
-                            listPrimitives[Convert.ToInt32(id[0])].dDraw(ref points);
+                            etelonAnswer += listPrimitives[Convert.ToInt32(id[0])].Included();
                             break;
                         case "u":
                             listPrimitives[Convert.ToInt32(id[0])].uDraw(ref points);
+                            etelonAnswer += listPrimitives[Convert.ToInt32(id[0])].unIncluded();
                             break;
                     }
                 }
+
+                if (i < listPrimitives.Count - 1)
+                    etelonAnswer += "&";
+
                 i++;
             }
 

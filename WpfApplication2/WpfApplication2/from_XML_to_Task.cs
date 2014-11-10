@@ -53,7 +53,7 @@ namespace WpfApplication2
                                     stack.Add(new ellipse(Convert.ToInt32(prim.Attribute("id").Value), 
                                                           new point(0, rand.Next(20, 35) * 10,
                                                                     rand.Next(10, 15) * 10),
-                                                                    rand.Next(4, 9) * 10, 2));
+                                                                    rand.Next(4, 9) * 10, 3));
                                 else
                                 {
                                     int R = rand.Next(3, 7) * 10;
@@ -211,7 +211,7 @@ namespace WpfApplication2
 
                                 for (int i = 0; i < lineCount; i++)
                                 {
-                                    lineList.Add(new line(i, pointList[i], pointList[(i == lineCount - 1) ? 0 : i + 1], 1));
+                                    lineList.Add(new line(i, pointList[i], pointList[(i == lineCount - 1) ? 0 : i + 1], 3));
                                 }
 
                                 stack.Add(new polygon(Convert.ToInt32(prim.Attribute("id").Value), lineCount, lineList));
@@ -274,107 +274,11 @@ namespace WpfApplication2
                                 i = 0;
                                 for (i = 0; i < lineCount; i++)
                                 {
-                                    lineList.Add(new line(i, pointList[i], pointList[i + 1], 1));
+                                    lineList.Add(new line(i, pointList[i], pointList[i + 1], 3));
                                 }
 
                                 stack.Add(new polyline(Convert.ToInt32(prim.Attribute("id").Value), lineCount, lineList));
                             }
-                            /*if (prim.Name == "lineblock")
-                            {
-                                int ID = -1;
-
-                                string link = prim.Attribute("link").Value;
-                                if (link != "none") ID = Convert.ToInt32(link);
-
-                                string type = prim.Attribute("type").Value;
-
-                                int lineCount = prim.Elements().Count<XElement>();
-
-                                if (type == "polygon")
-                                {
-                                    List<point> pointList = new List<point>();
-                                    int i = 0;
-
-                                    if (ID >= 0)
-                                        for (i = 0; i < lineCount; i++)
-                                        {
-                                            pointList.Add(new point(i, rand.Next(stack[ID].Coordinate.X - stack[ID].R,
-                                                                                 stack[ID].Coordinate.X + stack[ID].R),
-                                                                       rand.Next(stack[ID].Coordinate.Y - stack[ID].R,
-                                                                                 stack[ID].Coordinate.Y + stack[ID].R)));
-                                        }
-                                    else
-                                        for (i = 0; i < lineCount; i++)
-                                        {
-                                            pointList.Add(new point(i, rand.Next(1, 52) * 10,
-                                                                       rand.Next(1, 22) * 10));
-                                        }
-
-                                    i = 0;
-                                    foreach (XElement line in prim.Elements())
-                                    {
-                                        stack.Add(new line(Convert.ToInt32(line.Attribute("id").Value), pointList[i],
-                                                           (i + 1 != lineCount) ? pointList[i + 1] : pointList[0], 1));
-
-                                        i++;
-                                    }
-                                }
-                                else if (type == "polyline")
-                                {
-                                    List<point> pointList = new List<point>();
-                                    int i = 0;
-
-                                    if (ID >= 0)
-                                    {
-                                        int sector = (stack[ID].R * 2) / (lineCount - 1);
-
-                                        pointList.Add(new point(0, stack[ID].Coordinate.X - stack[ID].R,
-                                                                rand.Next(stack[ID].Coordinate.Y - stack[ID].R,
-                                                                          stack[ID].Coordinate.Y + stack[ID].R)));
-
-                                        for (i = 0; i < lineCount - 1; i++)
-                                        {
-                                            int X = 0, Y = 0;
-
-                                            while ((X - stack[ID].Coordinate.X) * (X - stack[ID].Coordinate.X) +
-                                                   (Y - stack[ID].Coordinate.Y) * (Y - stack[ID].Coordinate.Y) >=
-                                                   (stack[ID].R * stack[ID].R))
-                                            {
-                                                X = rand.Next(stack[ID].Coordinate.X - stack[ID].R + sector * i,
-                                                              stack[ID].Coordinate.X - stack[ID].R + sector * (i + 1));
-
-                                                Y = rand.Next(stack[ID].Coordinate.Y - stack[ID].R,
-                                                              stack[ID].Coordinate.Y + stack[ID].R);
-                                            }
-
-                                            pointList.Add(new point(i, X, Y));
-                                        }
-
-                                        pointList.Add(new point(lineCount + 1, stack[ID].Coordinate.X + stack[ID].R,
-                                                                rand.Next(stack[ID].Coordinate.Y - stack[ID].R,
-                                                                          stack[ID].Coordinate.Y + stack[ID].R)));
-                                    }
-                                    else
-                                    {
-                                        int sector = 55 / (lineCount + 1);
-
-                                        for (i = 0; i <= lineCount; i++)
-                                        {
-                                            pointList.Add(new point(i, rand.Next(1 + sector * i, 1 + sector * (i + 1)) * 10,
-                                                                       rand.Next(1, 22) * 10));
-                                        }
-                                    }
-
-                                    i = 0;
-                                    foreach (XElement line in prim.Elements())
-                                    {
-                                        stack.Add(new line(Convert.ToInt32(line.Attribute("id").Value), pointList[i],
-                                                                                                        pointList[i + 1], 1));
-
-                                        i++;
-                                    }
-                                }
-                            }*/
                         }
                     }
                     else if (parts.Name == "area")
