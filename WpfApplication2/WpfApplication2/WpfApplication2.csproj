@@ -77,6 +77,7 @@
     <Compile Include="from_XML_to_Task.cs" />
     <Compile Include="Primitives\polygon.cs" />
     <Compile Include="Primitives\polyline.cs" />
+    <Compile Include="RPN.cs" />
     <Compile Include="Task.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
