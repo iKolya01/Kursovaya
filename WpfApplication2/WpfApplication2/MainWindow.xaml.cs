@@ -19,56 +19,7 @@ namespace WpfApplication2
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {/*
-      * единичный отрезок для координат = 10px = 10 пунктов.
-      * начало координат (10; 260).
-      * вершина Оу (10; 10).
-      * вершина Ох (250; 550).
-      * 
-     */
-        int i = 0;
-
-        List<Task> taskList = new List<Task>();
-
-        static string fileAdress = "base.xml";
-
-        from_XML_to_Task Base = new from_XML_to_Task(fileAdress);
-
-        List <Primitive> arr = new List<Primitive>();
-
-        public void drawXOY(Canvas draw)//отрисовка оси координат
-        {   //ось Оу
-            new line(0, new point(0, 0, 250), new point(0, 5, 245), 1).Draw(draw);
-            new line(0, new point(0, 0, 250), new point(0, -5, 245), 1).Draw(draw);
-            new line(0, new point(0, 0, 0), new point(0, 0, 250), 1).Draw(draw);
-
-            //ось Ох
-            new line(0, new point(0, 550, 0), new point(0, 545, -5), 1).Draw(draw);
-            new line(0, new point(0, 550, 0), new point(0, 545, 5), 1).Draw(draw);
-            new line(0, new point(0, 0, 0), new point(0, 550, 0), 1).Draw(draw);
-
-            //обозначение начала О
-            new label(new Point(-5, 3), "O").Draw(draw);
-
-            //обозначаем Х
-            new label(new Point(540, 3), "X").Draw(draw);
-
-            //обозначаем Y
-            new label(new Point(3, 255), "Y").Draw(draw);
-
-            /*
-             *Далее идет нанесение штрихов для осей - единичных отрезков. 
-            */
-            for (int i = 10; i < 250; i += 10)//для оси Оу
-            {
-                new line(0, new point(0, -3, i), new point(0, 3, i), 1).Draw(draw);
-            }
-            for (int i = 10; i < 550; i += 10)//для оси Ох
-            {
-                new line(0, new point(0, i, -3), new point(0, i, 3), 1).Draw(draw);
-            }
-        }
-
+    {
         public MainWindow()
         {
             InitializeComponent();
@@ -76,17 +27,10 @@ namespace WpfApplication2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            scene.Children.Clear();
+            Test newTest = new Test();
+            newTest.Show();
 
-            taskList = Base.Decode();
-
-            if (i >= taskList.Count) i = 0;
-
-
-
-            taskList[i].Draw(scene);
-            drawXOY(scene);
-            i++;
+            this.Close();
         }
     }
 }
