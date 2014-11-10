@@ -33,6 +33,12 @@ namespace WpfApplication2.Primitives
             this.linewidth = linewidth;
         }
 
+        private string getUrv()
+        {
+            return "(x-" + Coordinate.X.ToString() + ")*(x-" + Coordinate.X.ToString() + ") + (y-" +
+                   Coordinate.Y.ToString() + ")*(y - " + Coordinate.Y.ToString() + ")=" + R.ToString() + "*" + R.ToString();
+        }
+
         public override void Draw(Canvas myCanvas)
         {
             Ellipse myEllipse = new Ellipse();
@@ -43,6 +49,20 @@ namespace WpfApplication2.Primitives
             myEllipse.Margin = new Thickness(10 + coordinate.X - r, 260 - coordinate.Y - r, 0, 0);
             myEllipse.Stroke = System.Windows.Media.Brushes.Black;
             myEllipse.StrokeThickness = linewidth;
+            myCanvas.Children.Add(myEllipse);
+        }
+
+        public override void Draw(Canvas myCanvas, bool lbl)
+        {
+            Ellipse myEllipse = new Ellipse();
+            myEllipse.HorizontalAlignment = HorizontalAlignment.Left;
+            myEllipse.VerticalAlignment = VerticalAlignment.Top;
+            myEllipse.Width = r * 2;
+            myEllipse.Height = r * 2;
+            myEllipse.Margin = new Thickness(10 + coordinate.X - r, 260 - coordinate.Y - r, 0, 0);
+            myEllipse.Stroke = System.Windows.Media.Brushes.Black;
+            myEllipse.StrokeThickness = linewidth;
+            myEllipse.ToolTip = getUrv();
             myCanvas.Children.Add(myEllipse);
         }
 

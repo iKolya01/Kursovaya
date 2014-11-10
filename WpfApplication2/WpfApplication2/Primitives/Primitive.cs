@@ -30,6 +30,8 @@ namespace WpfApplication2.Primitives
 
         public virtual void Draw(Canvas myCanvas) { }//отрисовка на форме
 
+        public virtual void Draw(Canvas myCanvas, bool lbl) { }//отрисовка на форме
+
         public virtual void aDraw(ref bool[,] points) { }//отрисовка на форме
 
         public virtual void bDraw(ref bool[,] points) { }//отрисовка на форме

@@ -31,6 +31,21 @@
 	</primitive>
 	<area>(0.u)</area>
   </template>
+  <template id="1">
+	<primitive>
+	  <circle id="0" link="none"/>
+	</primitive>
+	<area>(0.i)</area>
+  </template>
+  <template id="2">
+	<primitive>
+	  <!--<circle id="0" link="none"/>
+	  <circle id="1" link="0"/>
+	  <polygon id="0" link="none" linecount="5" />-->
+	  <polyline id="0" link="none" linecount="5" />
+	</primitive>
+	<area>(0.a)</area>
+  </template>
   <!--<template id="1">
 	<primitive>
 	  <circle id="0" link="none"/>

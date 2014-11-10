@@ -77,20 +77,33 @@ namespace WpfApplication2
 
             drawXOY(scene);
             taskList[i].Draw(scene);
+
+            lbl.Content = taskList[i].EtalonAnswer;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            taskList[i].UserAnswer = answer.Text;
+            if (i < taskList.Count)
+            {
+                taskList[i].UserAnswer = answer.Text;
 
-            scene.Children.Clear();
-            answer.Text = "";
+                scene.Children.Clear();
+                answer.Text = "";
 
-            if (i >= taskList.Count) i = 0;
+                drawXOY(scene);
+            }else
+            {
+ 
+            }
 
-            drawXOY(scene);
-            taskList[i].Draw(scene);
             i++;
+
+            if (i < taskList.Count)
+            {
+                taskList[i].Draw(scene);
+
+                lbl.Content = taskList[i].EtalonAnswer;
+            }
         }
     }
 }

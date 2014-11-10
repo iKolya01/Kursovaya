@@ -27,7 +27,7 @@ namespace WpfApplication2.Primitives
         {
             foreach (line l in lineList)
             {
-                l.Draw(myCanvas);
+                l.Draw(myCanvas, true);
             }
         }
 

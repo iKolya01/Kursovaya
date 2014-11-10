@@ -32,6 +32,18 @@ namespace WpfApplication2.Primitives
             this.linewidth = linewidth;
         }
 
+        private string getUrv()
+        {
+            int dx = One.X > Two.X ? One.X - Two.X : Two.X - One.X;
+            int dy = One.Y > Two.Y ? One.Y - Two.Y : Two.Y - One.Y;
+
+            float k = dy / dx;
+
+            float b = One.Y - k * One.X;
+
+            return "y=" + k.ToString() + "*x+" + b.ToString();
+        }
+
         public override void Draw(Canvas myCanvas)
         {
             Line myLine = new Line();
@@ -43,7 +55,21 @@ namespace WpfApplication2.Primitives
             myLine.Y2 = 260 - two.Y;
             myLine.StrokeThickness = linewidth;
             myLine.Stroke = System.Windows.Media.Brushes.Black;
-            myLine.ToolTip = "Ебаь это наведение";
+            myCanvas.Children.Add(myLine);
+        }
+
+        public override void Draw(Canvas myCanvas, bool lbl)
+        {
+            Line myLine = new Line();
+            myLine.HorizontalAlignment = HorizontalAlignment.Left;
+            myLine.VerticalAlignment = VerticalAlignment.Top;
+            myLine.X1 = 10 + one.X;
+            myLine.Y1 = 260 - one.Y;
+            myLine.X2 = 10 + two.X;
+            myLine.Y2 = 260 - two.Y;
+            myLine.StrokeThickness = linewidth;
+            myLine.Stroke = System.Windows.Media.Brushes.Black;
+            myLine.ToolTip = getUrv();
             myCanvas.Children.Add(myLine);
         }
 

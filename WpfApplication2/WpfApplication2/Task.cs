@@ -41,6 +41,11 @@ namespace WpfApplication2
             set { userAnswer = value; }
         }
 
+        public string EtalonAnswer
+        {
+            get { return etelonAnswer; }
+        }
+
         public Task() { }
 
         public Task(int id, List<Primitive> listPrimitives, string area)
@@ -107,7 +112,10 @@ namespace WpfApplication2
 
             foreach (var x in listPrimitives)
             {
-                x.Draw(myCanvas);
+                if (x is ellipse)
+                    x.Draw(myCanvas, true);
+                else
+                    x.Draw(myCanvas);
             }
         }
     }
