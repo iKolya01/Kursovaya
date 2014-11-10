@@ -93,7 +93,9 @@ namespace WpfApplication2
                 drawXOY(scene);
             }else
             {
- 
+                Result newRes = new Result();
+                newRes.Show();
+                this.Close();
             }
 
             i++;
@@ -103,6 +105,11 @@ namespace WpfApplication2
                 taskList[i].Draw(scene);
 
                 lbl.Content = taskList[i].EtalonAnswer;
+            }else
+            {
+                Result newRes = new Result();
+                newRes.Show();
+                this.Close();
             }
         }
     }

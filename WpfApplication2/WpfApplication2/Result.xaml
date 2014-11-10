@@ -1,4 +1,10 @@
 ﻿<Window x:Class="WpfApplication2.Result"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Результат" Height="273.134" Width="585.075"/>
+        Title="Результат" Height="273.134" Width="585.075" ResizeMode="NoResize">
+    <Canvas HorizontalAlignment="Left" Margin="10,10,0,-1.985" Width="565.075" Height="236.985" VerticalAlignment="Top">
+        <TextBlock x:Name="point" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="10.171" Height="216.814" Width="215.497" FontSize="150" TextAlignment="Center"/>
+        <TextBlock Canvas.Left="230" TextWrapping="Wrap" Text="Ваш рекомендуемый балл." Canvas.Top="98.868" Height="38.826" Width="325.075" FontSize="22" TextAlignment="Center"/>
+    </Canvas>
+
+</Window>

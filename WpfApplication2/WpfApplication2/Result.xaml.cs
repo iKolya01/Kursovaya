@@ -18,9 +18,16 @@ namespace WpfApplication2
     /// </summary>
     public partial class Result : Window
     {
+        TestChek ChekTest = new TestChek();
+
+        int result = 0;
+        int mark = 0;
+
         public Result()
         {
             InitializeComponent();
         }
+
+        
     }
 }
