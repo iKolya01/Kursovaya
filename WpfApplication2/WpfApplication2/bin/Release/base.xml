@@ -21,20 +21,23 @@
 	  </lineblock>
 	</primitive>
 	<area>(0.i)and(0.a)and(1.a)and(2.a)and(3.a)</area>
-  </template>
+  </template>-->
   <template id="0">
 	<primitive>
+	  <!--<circle id="0" link="none"/>
+	  <circle id="1" link="0"/>
+	  <polygon id="0" link="none" linecount="5" />-->
+	  <polygon id="0" link="none" linecount="5" />
+	</primitive>
+	<area>(0.u)</area>
+  </template>
+  <!--<template id="1">
+	<primitive>
 	  <circle id="0" link="none"/>
+	  <polygon id="0" link="none" linecount="5" />
 	</primitive>
 	<area>(0.u)</area>
   </template>-->
-  <template id="1">
-	<primitive>
-	  <circle id="0" link="none"/>
-	  <polygon id="1" link="0" linecount="5" />
-	</primitive>
-	<area></area>
-  </template>
   <!--<template id="2">
 	<primitive>
 	  <polyline id="0" link="none" linecount="5" />

@@ -4,6 +4,7 @@
         Title="Тестирование" Height="400" Width="750" ResizeMode="NoResize">
     <Canvas Name="myCanvas1">
         <Canvas Name="scene" Margin="90,0,0,0"></Canvas>
-        <Button Content="Button" Click="Button_Click" Canvas.Top="327" Width="724" Height="35" Canvas.Left="10"/>
+        <Button Content="Следующее задание" Click="Button_Click" Canvas.Top="327" Width="724" Height="35" Canvas.Left="10"/>
+        <TextBox x:Name="answer" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="Ответ" Canvas.Top="281" Width="724" TextAlignment="Center"/>
     </Canvas>
 </Window>

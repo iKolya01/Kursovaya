@@ -3,7 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Главное окно" Height="400" Width="750" ResizeMode="NoResize">
     <Canvas Name="myCanvas1">
-        <Button Content="Начать тест" Canvas.Left="313.418" Canvas.Top="191.417" Width="75" Click="Button_Click"/>
+        <Button x:Name="startTest" Content="Начать тест" Canvas.Left="10" Canvas.Top="209" Width="724" Click="Button_Click" Height="103.746" FontSize="48"/>
+        <TextBox Height="31.956" Canvas.Left="100" TextWrapping="Wrap" Text="" Canvas.Top="135" Width="550" FontSize="16" TextAlignment="Center"/>
+        <Label Content="Введите фамилию и имя" Canvas.Left="280.537" Canvas.Top="75.119" FontSize="16"/>
+        <Button x:Name="statistic" Content="Статистика" Canvas.Left="10" Canvas.Top="317.873" Width="724" Height="44.127"/>
 
     </Canvas>
 </Window>

@@ -72,20 +72,24 @@ namespace WpfApplication2
         public Test()
         {
             InitializeComponent();
+
+            taskList = Base.Decode();
+
+            drawXOY(scene);
+            taskList[i].Draw(scene);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            scene.Children.Clear();
+            taskList[i].UserAnswer = answer.Text;
 
-            taskList = Base.Decode();
+            scene.Children.Clear();
+            answer.Text = "";
 
             if (i >= taskList.Count) i = 0;
 
-
-
-            taskList[i].Draw(scene);
             drawXOY(scene);
+            taskList[i].Draw(scene);
             i++;
         }
     }
