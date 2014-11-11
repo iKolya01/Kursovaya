@@ -80,7 +80,7 @@ namespace WpfApplication2
             drawXOY(scene);
             taskList[i].Draw(scene);
 
-            lbl.Text = taskList[i].EtalonAnswer;
+            //lbl.Text = taskList[i].EtalonAnswer;
 
             userName = FI;
         }
@@ -108,7 +108,7 @@ namespace WpfApplication2
             {
                 taskList[i].Draw(scene);
 
-                lbl.Text = taskList[i].EtalonAnswer;
+                //lbl.Text = taskList[i].EtalonAnswer;
             }else
             {
                 Result newRes = new Result(taskList, userName);

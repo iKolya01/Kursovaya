@@ -6,7 +6,7 @@
         <Canvas Name="scene" Margin="90,0,0,0"></Canvas>
         <Button Content="Следующее задание" Click="Button_Click" Canvas.Top="327" Width="724" Height="35" Canvas.Left="10"/>
         <TextBox x:Name="answer" Height="23" Canvas.Left="90" TextWrapping="Wrap" Text="" Canvas.Top="299" Width="644" TextAlignment="Center"/>
-        <TextBox x:Name="lbl" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="TextBox" Canvas.Top="10" Width="724"/>
+        <!--<TextBox x:Name="lbl" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="TextBox" Canvas.Top="10" Width="724"/>-->
         <Label Content="Ваш овтет:" Canvas.Left="10" Canvas.Top="299" Height="23" Width="80"/>
     </Canvas>
 </Window>
