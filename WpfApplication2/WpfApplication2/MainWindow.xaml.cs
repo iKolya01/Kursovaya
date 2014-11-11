@@ -33,5 +33,10 @@ namespace WpfApplication2
 
             this.Close();
         }
+
+        private void statistic_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

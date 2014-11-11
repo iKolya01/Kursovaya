@@ -117,6 +117,12 @@ namespace WpfApplication2 {
             return;
             case 4:
             this.statistic = ((System.Windows.Controls.Button)(target));
+            
+            #line 9 "..\..\MainWindow.xaml"
+            this.statistic.Click += new System.Windows.RoutedEventHandler(this.statistic_Click);
+            
+            #line default
+            #line hidden
             return;
             }
             this._contentLoaded = true;
