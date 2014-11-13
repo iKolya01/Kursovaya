@@ -53,7 +53,7 @@ namespace WpfApplication2
                         {
                             if (ChekTest.getChek(UAL[i], EAL[j]))
                             {
-                                EAL[i] = "";
+                                EAL[j] = "";
                                 pro--;
                             }
                         }

@@ -62,6 +62,7 @@ namespace WpfApplication2
                                 j--;
                                 stack = stack.Remove(stack.Length - 1);
                             }
+                            stack = stack.Remove(stack.Length - 1);
 
                             break;
                         }
@@ -118,7 +119,11 @@ namespace WpfApplication2
                 i++;
             }
 
-            return result;
+            for (int j = stack.Length - 1; j >= 0; j--)
+            {
+                result += stack[j];
+            }
+                return result;
         }
     }
 }

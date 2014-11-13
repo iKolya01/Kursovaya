@@ -9,5 +9,6 @@
         <!--<TextBox x:Name="lbl" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="TextBox" Canvas.Top="10" Width="724"/>-->
         <Label Content="Ваш ответ:" Canvas.Left="10" Canvas.Top="299" Height="23" Width="80"/>
         <Button Content="Справка" Canvas.Left="662" Canvas.Top="327" Width="72" Height="35" Click="Button_Click_1"/>
+        <TextBox x:Name="lbl" Height="23" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="276" Width="724"/>
     </Canvas>
 </Window>
