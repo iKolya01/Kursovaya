@@ -64,8 +64,6 @@ namespace WpfApplication2.Primitives
 
         public virtual point Two { get; set; }
 
-        public virtual point Three { get; set; }
-
         public virtual string Above() { return ""; }
 
         public virtual string Below() { return ""; }

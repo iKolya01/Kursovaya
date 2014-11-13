@@ -36,8 +36,6 @@ namespace WpfApplication2
 
         from_XML_to_Task Base = new from_XML_to_Task(fileAdress);
 
-        List<Primitive> arr = new List<Primitive>();
-
         public void drawXOY(Canvas draw)//отрисовка оси координат
         {   //ось Оу
             new line(0, new point(0, 0, 250), new point(0, 5, 245), 1).Draw(draw);
@@ -115,6 +113,12 @@ namespace WpfApplication2
                 newRes.Show();
                 this.Close();
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Help newHelp = new Help();
+            newHelp.Show();
         }
     }
 }

@@ -37,11 +37,11 @@ namespace WpfApplication2
                 string[] ans = {x.EtalonAnswer, x.UserAnswer};
                 answer.Add(ans);
 
+                x.UserAnswer = x.UserAnswer.Replace("&&", "&");
+                x.UserAnswer = x.UserAnswer.Replace(".", ",");
+
                 string[] EAL = x.EtalonAnswer.Split('&');
                 string[] UAL = x.UserAnswer.Split('&');
-
-                foreach (string str in UAL)
-                    str.Trim('&');
 
                 int pro = UAL.Length;
 
@@ -51,7 +51,7 @@ namespace WpfApplication2
                     {
                         for (int j = 0; j < EAL.Length; j++)
                         {
-                            if (UAL[i] == EAL[j])
+                            if (ChekTest.getChek(UAL[i], EAL[j]))
                             {
                                 EAL[i] = "";
                                 pro--;

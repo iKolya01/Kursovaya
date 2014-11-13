@@ -36,7 +36,8 @@ namespace WpfApplication2
 
         private void statistic_Click(object sender, RoutedEventArgs e)
         {
-
+            Statistic newStat = new Statistic();
+            newStat.Show();
         }
     }
 }

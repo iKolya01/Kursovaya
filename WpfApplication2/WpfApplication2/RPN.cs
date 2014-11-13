@@ -27,7 +27,6 @@ namespace WpfApplication2
             string result = "";
 
             result = returnString[returnString.Length - 1].ToString();
-            returnString.Remove(returnString.Length - 1);
 
             return result;
         }
@@ -61,8 +60,8 @@ namespace WpfApplication2
                             {
                                 result += retEndDel(stack);
                                 j--;
+                                stack = stack.Remove(stack.Length - 1);
                             }
-                            stack.Remove(stack.Length - 1);
 
                             break;
                         }

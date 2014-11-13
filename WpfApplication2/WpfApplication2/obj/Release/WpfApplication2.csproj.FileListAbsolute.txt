@@ -27,3 +27,7 @@ C:\Users\Коля\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\obj
 C:\Users\Коля\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\obj\Release\WpfApplication2.csprojResolveAssemblyReference.cache
 C:\Users\Коля\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\obj\Release\Result.baml
 C:\Users\Коля\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\obj\Release\Result.g.cs
+C:\Users\Коля\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\obj\Release\Help.baml
+C:\Users\Коля\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\obj\Release\Help.g.cs
+C:\Users\Коля\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\obj\Release\Statistic.baml
+C:\Users\Коля\Documents\GitHub\Kursovaya\WpfApplication2\WpfApplication2\obj\Release\Statistic.g.cs

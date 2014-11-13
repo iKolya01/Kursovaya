@@ -62,6 +62,8 @@ namespace WpfApplication2
         public void Draw(Canvas myCanvas)
         {
             int i = 0;
+
+            int count = 0;
             while(i < area.Length)
             {
                 string idFun = "";
@@ -98,8 +100,10 @@ namespace WpfApplication2
                     }
                 }
 
-                if (i < listPrimitives.Count - 1)
+                if (count < listPrimitives.Count - 1)
                     etelonAnswer += "&";
+
+                count++;
 
                 i++;
             }
