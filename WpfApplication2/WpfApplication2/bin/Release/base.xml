@@ -50,6 +50,13 @@
 	</primitive>
 	<area>(0.i)</area>
   </template>
+  <template id="8">
+	<primitive>
+	  <circle id="0" link="none"/>
+	  <polyline id="1" link="0" linecount="3" />
+	</primitive>
+	<area>(0.i)(1.a)</area>
+  </template>
 </base>
 
 
