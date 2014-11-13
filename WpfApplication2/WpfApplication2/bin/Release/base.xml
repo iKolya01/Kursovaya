@@ -9,53 +9,61 @@
   <template id="1">
 	<primitive>
 	  <circle id="0" link="none"/>
-	  <polygon id="1" link="0" linecount="3" />
 	</primitive>
-	<area>(0.i)(1.u)</area>
+	<area>(0.i)</area>
   </template>
   <template id="2">
 	<primitive>
-	  <polyline id="0" link="none" linecount="3" />
-	</primitive>
-	<area>(0.a)</area>
-  </template>
-  <template id="7">
-	<primitive>
-	  <circle id="0" link="none"/>
+	  <polygon id="0" link="none" linecount="5" />
 	</primitive>
 	<area>(0.i)</area>
   </template>
   <template id="3">
 	<primitive>
-	  <polyline id="0" link="none" linecount="2" />
+	  <circle id="0" link="none"/>
+	  <circle id="1" link="0"/>
 	</primitive>
-	<area>(0.a)</area>
+	<area>(0.i)(1.i)</area>
   </template>
   <template id="4">
 	<primitive>
 	  <circle id="0" link="none"/>
-	  <polygon id="1" link="0" linecount="3" />
+	  <polyline id="1" link="0" linecount="3" />
 	</primitive>
-	<area>(0.i)(1.u)</area>
+	<area>(0.i)(1.a)</area>
   </template>
   <template id="5">
 	<primitive>
 	  <polyline id="0" link="none" linecount="3" />
 	</primitive>
-	<area>(0.a)</area>
+	<area>(0.b)</area>
   </template>
   <template id="6">
 	<primitive>
 	  <circle id="0" link="none"/>
 	</primitive>
-	<area>(0.i)</area>
+	<area>(0.u)</area>
+  </template>
+  <template id="7">
+	<primitive>
+	  <polygon id="0" link="none" linecount="4" />
+	  <polygon id="1" link="none" linecount="4" />
+	</primitive>
+	<area>(0.i)(1.i)</area>
   </template>
   <template id="8">
 	<primitive>
 	  <circle id="0" link="none"/>
 	  <polyline id="1" link="0" linecount="3" />
 	</primitive>
-	<area>(0.i)(1.a)</area>
+	<area>(0.i)(1.b)</area>
+  </template>
+  <template id="9">
+	<primitive>
+	  <polyline id="0" link="none" linecount="3" />
+	  <polyline id="1" link="none" linecount="3" />
+	</primitive>
+	<area>(0.a)(1.b)</area>
   </template>
 </base>
 
